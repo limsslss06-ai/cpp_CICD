@@ -42,7 +42,7 @@ jobs:
           docker run --rm \
             -v "${{ github.workspace }}:/app" \
             docker/ubuntu_22.04.v2:latest \
-            bash -c "cmake --preset linux-debug;   cmake --build --preset linux-debug" # 5.build binary
+            bash -c "pwd;  ls -l /app;  cmake --preset linux-debug;   cmake --build --preset linux-debug" # 5.build binary
             
 
       - name: Create Release
