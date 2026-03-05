@@ -36,6 +36,14 @@ jobs:
                        -t docker/ubuntu_22.04.v2:latest \
                        ./dockerfile
 
+      # 4️⃣ run container 
+      - name: Build in Container
+        run: |
+          docker run --rm \
+            -v "${{ github.workspace }}:/app" \
+            docker/ubuntu_22.04.v2:latest \
+            bash -c "mkdir -p build; cd build; cmake -G Ninja ..; ninja" # build 
+
 
 
       
