@@ -1,8 +1,9 @@
 # 1. clone src code
 # 2. clone building docker image
-# 3. build container
-# 4. build
-# 5. push/release
+# 3. build image
+# 4. build container
+# 5. run container to build
+# 6. push/release
 
 name: build binary
 
