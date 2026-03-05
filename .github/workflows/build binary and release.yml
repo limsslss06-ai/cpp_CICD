@@ -5,3 +5,36 @@
 # 5. push/release
 
 name: build binary 
+
+name: build binary
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1️⃣ clone src code
+      - name: Checkout source code
+        uses: actions/checkout@v4
+
+      # 2️⃣ clone Dockerfile repo
+      - name: Clone Dockerfile repo
+        run: |
+          git clone https://github.com/limsslss06-ai/dockerfile.git
+
+      # 3️⃣ build Docker image
+      - name: Build Docker Image
+        run: |
+          docker build -f dockerfile/docker/Dockerfile.ubuntu_22.04.v2 \
+                       -t docker/ubuntu_22.04.v2:latest \
+                       ./dockerfile
+
+
+
+      
