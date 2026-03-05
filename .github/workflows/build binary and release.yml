@@ -60,9 +60,10 @@ jobs:
     
       - name: Upload Linux Binary to Release
         uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
           asset_path: ./out/build/linux-debug/CMakeProject1/CMakeProject1
-          asset_name: CMakeProject1  # binary file
+          asset_name: CMakeProject1
           asset_content_type: application/octet-stream
-          headers: Authorization: token ${{ secrets.GITHUB_TOKEN }}
