@@ -4,8 +4,6 @@
 # 4. build
 # 5. push/release
 
-name: build binary 
-
 name: build binary
 
 on:
