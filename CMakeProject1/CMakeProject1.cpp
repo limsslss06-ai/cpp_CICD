@@ -5,8 +5,12 @@
 
 using namespace std;
 
+void print_hey();
+
+
 int main()
 {
 	cout << "Hello CMake." << endl;
+	print_hey();
 	return 0;
 }

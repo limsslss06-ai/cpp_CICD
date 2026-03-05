@@ -6,3 +6,10 @@
 #include <iostream>
 
 // TODO: Reference additional headers your program requires here.
+
+
+
+void print_hey() {
+	using namespace std;
+	cout << "hey";
+}
