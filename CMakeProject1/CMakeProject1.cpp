@@ -7,10 +7,14 @@ using namespace std;
 
 void print_hey();
 
+void step_1();
 
 int main()
 {
-	cout << "Hello CMake." << endl;
+	cout << "Hello CMake.\n" << endl;
 	print_hey();
+	cout << endl;
+	step_1();
+	cout << "\nfinish\n";
 	return 0;
 }

@@ -13,3 +13,8 @@ void print_hey() {
 	using namespace std;
 	cout << "hey";
 }
+
+void step_1() {
+	using namespace std;
+	cout << "that" << endl;
+}
